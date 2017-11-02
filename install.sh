@@ -97,6 +97,6 @@ sudo rm get-docker.sh
 sudo apt-get update
 
 #Changing shell to Zsh
-chsh -s `which zsh`
+sudo chsh -s `which zsh`
 #Need to restart to apply all updates
 sudo shutdown -r 0
