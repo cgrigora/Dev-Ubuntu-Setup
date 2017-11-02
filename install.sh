@@ -19,7 +19,7 @@ sudo apt-get --assume-yes install nodejs-legacy
 # NPM
 sudo apt-get --assume-yes install npm
 # NVM
-sudo npm install -g nvm
+wget -qO- https://raw.githubusercontent.com/creationix/nvm/v0.33.6/install.sh | bash
 sudo nvm install node
 sudo nvm use node
 sudo nvm install --lts
