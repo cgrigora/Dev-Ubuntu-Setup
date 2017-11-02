@@ -13,16 +13,17 @@ sudo pip install --upgrade pip
 sudo pip install --upgrade virtualenv
 sudo apt-get --assume-yes install libkrb5-dev
 
-# Nodejs and NVM
+
+# Nodejs
 sudo apt-get --assume-yes install nodejs-legacy
-curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.6/install.sh | bash
-source ~/.profile
-sudo nvm install node
-sudo nvm use node
-nvm install --lts
-node -v
 # NPM
 sudo apt-get --assume-yes install npm
+# NVM
+sudo npm install -g nvm
+sudo nvm install node
+sudo nvm use node
+sudo nvm install --lts
+node -v
 
 # Mongodb, Installing and starting server
 sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv EA312927
@@ -93,7 +94,8 @@ sudo chsh -s `which zsh`
 
 #Need to restart to apply all updates
 #sudo shutdown -r 0
-echo -e "\e[41mYou need to restart your computer to apply all changes with this command => \e[0m  shutdown -r 0"
+echo "You need to restart your computer to apply all changes with this command =>" 
+echo "shutdown -r 0"
 
 # Nuclide
 #apm install nuclide
