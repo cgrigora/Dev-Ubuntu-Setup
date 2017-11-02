@@ -97,9 +97,10 @@ sudo apt-get install code # or code-insiders
 #sudo apt-get install xclip
 # Zsh
 sudo apt-get install zsh
+wget https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh -O - | zsh
+
 #Changing shell to Zsh
 sudo chsh -s `which zsh`
-sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 
 # Final Update
 sudo apt-get update
