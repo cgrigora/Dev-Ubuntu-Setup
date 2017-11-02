@@ -86,7 +86,7 @@ sudo apt-get update
 
 # Zsh
 sudo apt-get --assume-yes install zsh
-wget –no-check-certificate https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh -O – | sh
+curl https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh -O – | sh
 
 #Changing shell to Zsh
 sudo chsh -s `which zsh`
