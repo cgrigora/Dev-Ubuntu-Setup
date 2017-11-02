@@ -22,7 +22,6 @@ sudo apt-get --assume-yes install npm
 wget -qO- https://raw.githubusercontent.com/creationix/nvm/v0.33.6/install.sh | bash
 sudo nvm install node
 sudo nvm use node
-sudo nvm install --lts
 node -v
 
 # Mongodb, Installing and starting server
@@ -91,7 +90,8 @@ wget –no-check-certificate https://github.com/robbyrussell/oh-my-zsh/raw/maste
 
 #Changing shell to Zsh
 sudo chsh -s `which zsh`
-
+#Node update
+nvm install --lts
 #Need to restart to apply all updates
 #sudo shutdown -r 0
 echo "You need to restart your computer to apply all changes with this command =>" 
