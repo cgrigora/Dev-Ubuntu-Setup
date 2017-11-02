@@ -35,6 +35,7 @@ sudo service mongod status
 # Git - a version control system Update
 sudo apt-get update
 sudo apt-get --assume-yes install git
+sudo apt-get --assume-yes install git-core
 
 # Yeoman - for generators
 sudo npm install -g yo
