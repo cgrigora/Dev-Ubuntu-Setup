@@ -106,5 +106,5 @@ sudo apt-get update
 #Changing shell to Zsh
 sudo chsh -s `which zsh`
 #Need to restart to apply all updates
-echo "You need to restart your computer to apply all changes"
+echo -e "\e[41mYou need to restart your computer to apply all changes\e[0m"
 #sudo shutdown -r 0
