@@ -50,10 +50,6 @@ sudo apt-get install --assume-yes qemu-kvm libvirt-bin ubuntu-vm-builder bridge-
 sudo apt-get install --assume-yes virt-manager
 sudo apt-get install --assume-yes lib32z1 lib32ncurses5 lib32bz2-1.0 lib32stdc++6
 
-# Zsh
-sudo apt-get install zsh
-echo exit
-sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 # Docker
 curl -fsSL get.docker.com -o get-docker.sh
 sh get-docker.sh
@@ -99,7 +95,11 @@ sudo apt-get install code # or code-insiders
 #sudo apt-get install xpad
 # xClip
 #sudo apt-get install xclip
-
+# Zsh
+sudo apt-get install zsh
+sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+echo exit
+exit
 # Final Update
 sudo apt-get update
 
