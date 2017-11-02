@@ -45,16 +45,16 @@ sudo npm install -g yo
 sudo apt-get --assume-yes install unace unrar zip unzip p7zip-full p7zip-rar sharutils rar uudeview mpack arj cabextract file-roller
 
 # KVM acceleration and cpu checker
-sudo apt-get install --assume-yes cpu-checker
-sudo apt-get install --assume-yes qemu-kvm libvirt-bin ubuntu-vm-builder bridge-utils
-sudo apt-get install --assume-yes virt-manager
-sudo apt-get install --assume-yes lib32z1 lib32ncurses5 lib32bz2-1.0 lib32stdc++6
+sudo apt-get --assume-yes install  cpu-checker
+sudo apt-get --assume-yes install  qemu-kvm libvirt-bin ubuntu-vm-builder bridge-utils
+sudo apt-get --assume-yes install  virt-manager
+sudo apt-get --assume-yes install  lib32z1 lib32ncurses5 lib32bz2-1.0 lib32stdc++6
 
 # Docker
 curl -fsSL get.docker.com -o get-docker.sh
 sh get-docker.sh
 # Docker-compose
-sudo pip install docker-compose
+sudo apt-get --assume-yes install docker-compose
 # Get super-perm for Docker
 sudo chown "$USER":"$USER" /home/"$USER"/.docker -R
 sudo chown "$USER":"$USER" /var/run/docker.sock -R
@@ -63,9 +63,9 @@ sudo chown "$USER":"$USER" /var/run/docker.sock -R
 curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
 echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
 sudo apt-get update
-sudo apt-get install yarn
+sudo apt-get --assume-yes install yarn
 # Install Ansible with
-sudo pip install ansible
+sudo apt-get --assume-yes install ansible
 
 # Atom
 curl -L https://atom.io/download/deb -o atom-amd64.deb
@@ -79,33 +79,34 @@ curl https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > microso
 sudo mv microsoft.gpg /etc/apt/trusted.gpg.d/microsoft.gpg
 sudo sh -c 'echo "deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main" > /etc/apt/sources.list.d/vscode.list'
 sudo apt-get update
-sudo apt-get install code # or code-insiders
-# Nuclide
-#apm install nuclide
-
-# TLP - saves battery when Ubuntu is installed on Laptops
-# sudo apt-get remove laptop-mode-tools
-# sudo add-apt-repository ppa:linrunner/tlp
-# sudo apt-get update
-# sudo apt-get install tlp tlp-rdw smartmontools ethtool
-# sudo tlp start
-# sudo tlp stat
-
-# Xpad
-#sudo apt-get install xpad
-# xClip
-#sudo apt-get install xclip
-# Zsh
-sudo apt-get install zsh
-wget https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh -O - | zsh
-
-#Changing shell to Zsh
-sudo chsh -s `which zsh`
+sudo apt-get --assume-yes install code # or code-insiders
 
 # Final Update
 sudo apt-get update
+
+# Zsh
+sudo apt-get --assume-yes install zsh
+wget –no-check-certificate https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh -O – | sh
+
+#Changing shell to Zsh
+sudo chsh -s `which zsh`
 
 #Need to restart to apply all updates
 #sudo shutdown -r 0
 echo -e "\e[41mYou need to restart your computer to apply all changes with this command => \e[0m  shutdown -r 0"
 
+# Nuclide
+#apm install nuclide
+
+# TLP - saves battery when Ubuntu is installed on Laptops
+# sudo apt-get --assume-yes remove laptop-mode-tools
+# sudo add-apt-repository ppa:linrunner/tlp
+# sudo apt-get update
+# sudo apt-get --assume-yes install tlp tlp-rdw smartmontools ethtool
+# sudo tlp start
+# sudo tlp stat
+
+# Xpad
+#sudo apt-get --assume-yes install xpad
+# xClip
+#sudo apt-get --assume-yes install xclip
