@@ -86,7 +86,11 @@ sudo apt-get update
 
 # Zsh
 sudo apt-get --assume-yes install zsh
-curl https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh -O – | sh
+wget https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh -O - | zsh
+#NVM OHMYZSH FIX
+export NVM_DIR="/home/sohan/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+source ~/.nvm/nvm.sh
 
 #Changing shell to Zsh
 sudo chsh -s `which zsh`
