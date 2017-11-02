@@ -77,6 +77,13 @@ sudo dpkg -i atom-amd64.deb
 sudo apt-get -f install
 sudo rm atom-amd64.deb
 sudo rm get-docker.sh
+
+# Visual Studio code
+curl https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > microsoft.gpg
+sudo mv microsoft.gpg /etc/apt/trusted.gpg.d/microsoft.gpg
+sudo sh -c 'echo "deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main" > /etc/apt/sources.list.d/vscode.list'
+sudo apt-get update
+sudo apt-get install code # or code-insiders
 # Nuclide
 #apm install nuclide
 
@@ -99,4 +106,5 @@ sudo apt-get update
 #Changing shell to Zsh
 sudo chsh -s `which zsh`
 #Need to restart to apply all updates
-sudo shutdown -r 0
+echo "You need to restart your computer to apply all changes"
+#sudo shutdown -r 0
