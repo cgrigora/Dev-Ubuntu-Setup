@@ -97,14 +97,14 @@ sudo apt-get install code # or code-insiders
 #sudo apt-get install xclip
 # Zsh
 sudo apt-get install zsh
+#Changing shell to Zsh
+sudo chsh -s `which zsh`
 sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
-echo exit
-exit
+
 # Final Update
 sudo apt-get update
 
-#Changing shell to Zsh
-sudo chsh -s `which zsh`
 #Need to restart to apply all updates
-echo -e "\e[41mYou need to restart your computer to apply all changes\e[0m"
 #sudo shutdown -r 0
+echo -e "\e[41mYou need to restart your computer to apply all changes with this command => \e[0m  shutdown -r 0"
+
