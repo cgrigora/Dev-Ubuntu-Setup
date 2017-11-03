@@ -53,11 +53,24 @@ sudo apt-get --assume-yes install  lib32z1 lib32ncurses5 lib32bz2-1.0 lib32stdc+
 # Docker
 curl -fsSL get.docker.com -o get-docker.sh
 sh get-docker.sh
+
 # Docker-compose
 sudo apt-get --assume-yes install docker-compose
+
 # Get super-perm for Docker
 sudo chown "$USER":"$USER" /home/"$USER"/.docker -R
 sudo chown "$USER":"$USER" /var/run/docker.sock -R
+
+# Docker-Machine
+curl -L https://github.com/docker/machine/releases/download/v0.13.0/docker-machine-`uname -s`-`uname -m` >/tmp/docker-machine
+chmod +x /tmp/docker-machine
+sudo cp /tmp/docker-machine /usr/local/bin/docker-machine
+
+# Virtualbox
+sudo apt-get install virtualbox
+
+# Docker Create default machine 
+docker-machine create -d virtualbox fastit
 
 # Yarn
 curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
