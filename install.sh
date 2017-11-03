@@ -53,7 +53,7 @@ sudo apt-get --assume-yes install unace unrar zip unzip p7zip-full p7zip-rar sha
 sudo apt-get --assume-yes install  cpu-checker
 sudo apt-get --assume-yes install  qemu-kvm libvirt-bin ubuntu-vm-builder bridge-utils
 sudo apt-get --assume-yes install  virt-manager
-sudo apt-get --assume-yes install  lib32z1 lib32ncurses5 lib32bz2-1.0 lib32stdc++6
+sudo apt-get --assume-yes install  lib32z1 lib32ncurses5 lib32stdc++6
 
 # Docker
 curl -fsSL get.docker.com -o get-docker.sh
