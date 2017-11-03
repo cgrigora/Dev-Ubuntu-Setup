@@ -13,11 +13,16 @@ sudo pip install --upgrade pip
 sudo pip install --upgrade virtualenv
 sudo apt-get --assume-yes install libkrb5-dev
 
+# Virtualbox
+sudo apt-get --assume-yes install virtualbox
+
 
 # Nodejs
 sudo apt-get --assume-yes install nodejs-legacy
+
 # NPM
 sudo apt-get --assume-yes install npm
+
 # NVM
 wget -qO- https://raw.githubusercontent.com/creationix/nvm/v0.33.6/install.sh | bash
 sudo nvm install node
@@ -66,17 +71,12 @@ curl -L https://github.com/docker/machine/releases/download/v0.13.0/docker-machi
 chmod +x /tmp/docker-machine
 sudo cp /tmp/docker-machine /usr/local/bin/docker-machine
 
-# Virtualbox
-sudo apt-get install virtualbox
-
-# Docker Create default machine 
-docker-machine create -d virtualbox fastit
-
 # Yarn
 curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
 echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
 sudo apt-get update
 sudo apt-get --assume-yes install yarn
+
 # Install Ansible with
 sudo apt-get --assume-yes install ansible
 
@@ -109,6 +109,10 @@ export NVM_DIR="$HOME/.nvm"
 
 #Node update
 nvm install --lts
+
+# Docker Create default machine 
+sudo docker-machine create -d virtualbox fastit
+
 #Need to restart to apply all updates
 echo "You need to restart your computer to apply all changes with this command =>" 
 echo "shutdown -r 0"
