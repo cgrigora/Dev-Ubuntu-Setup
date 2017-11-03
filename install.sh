@@ -8,7 +8,7 @@ sudo apt-get --assume-yes install build-essential libssl-dev
 
 # Vim, Curl, Python - useful stuff
 sudo apt-get --assume-yes install vim curl python-software-properties
-sudo apt-get--assume-yes install python-pip python-dev build-essential
+sudo apt-get --assume-yes install python-pip python-dev build-essential
 sudo pip install --upgrade pip
 sudo pip install --upgrade virtualenv
 sudo apt-get --assume-yes install libkrb5-dev
