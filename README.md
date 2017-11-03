@@ -20,7 +20,7 @@ and then restart
 
     sudo shutdown -r 0
 
-#NVM OHMYZSH FIX
+# NVM OHMYZSH FIX
 
     export NVM_DIR="$HOME/.nvm"
     [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
