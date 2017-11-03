@@ -87,19 +87,19 @@ sudo apt-get update
 # Zsh
 sudo apt-get --assume-yes install zsh
 wget https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh -O - | zsh
-#NVM OHMYZSH FIX
-export NVM_DIR="/home/sohan/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
-source ~/.nvm/nvm.sh
-
 #Changing shell to Zsh
 sudo chsh -s `which zsh`
+#NVM OHMYZSH FIX
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
 #Node update
 nvm install --lts
 #Need to restart to apply all updates
-#sudo shutdown -r 0
 echo "You need to restart your computer to apply all changes with this command =>" 
 echo "shutdown -r 0"
+#sudo shutdown -r 0
 
 # Nuclide
 #apm install nuclide
