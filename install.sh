@@ -1,6 +1,5 @@
 #!/bin/bash
 #Fastit Development Machine Setup on Ubuntu
-
 sudo apt-get update
 
 # Installing build essentials
@@ -48,10 +47,6 @@ sh get-docker.sh
 
 # Docker-compose
 sudo apt-get --assume-yes install docker-compose
-
-# Get super-perm for Docker
-sudo chown "$USER":"$USER" /home/"$USER"/.docker -R
-sudo chown "$USER":"$USER" /var/run/docker.sock -R
 
 # Docker-Machine
 curl -L https://github.com/docker/machine/releases/download/v0.13.0/docker-machine-`uname -s`-`uname -m` >/tmp/docker-machine

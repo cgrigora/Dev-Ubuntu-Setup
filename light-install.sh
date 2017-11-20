@@ -65,12 +65,6 @@ sudo apt-get update
 # Zsh
 sudo apt-get --assume-yes install zsh
 wget https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh -O - | zsh
-#Changing shell to Zsh
-sudo chsh -s `which zsh`
-#NVM OHMYZSH FIX
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 #Node update
 sudo nvm install --lts
