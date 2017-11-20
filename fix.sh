@@ -1,11 +1,11 @@
 #Changing shell to Zsh
-sudo chsh -s `which zsh`
+chsh -s $(which zsh)
 #NVM OHMYZSH FIX
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 # Get super-perm for Docker
-sudo chown "$USER":"$USER" /home/"$USER"/.docker -R
+chown "$USER":"$USER" /home/"$USER"/.docker -R
 sudo chown "$USER":"$USER" /var/run/docker.sock -R
 #Node update
 sudo nvm install --lts
