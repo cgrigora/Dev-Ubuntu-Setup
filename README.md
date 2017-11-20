@@ -6,6 +6,13 @@ Just execute this command
 ``` bash
 wget -O - https://raw.githubusercontent.com/FastIT/Dev-Ubuntu-Setup/master/install.sh | sh
 ```
+
+## FOR LIGHT VERSION USE THIS SH
+Just execute this command
+
+``` bash
+wget -O - https://raw.githubusercontent.com/FastIT/Dev-Ubuntu-Setup/master/install.sh | sh
+```
 ## OHMYZSH Bug Fix
 
 Getting zsh to work in ubuntu is weird, since `sh` does not understand the `source` command.  So, you do this to install zsh
