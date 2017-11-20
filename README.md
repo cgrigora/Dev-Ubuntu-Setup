@@ -11,7 +11,7 @@ wget -O - https://raw.githubusercontent.com/FastIT/Dev-Ubuntu-Setup/master/insta
 Just execute this command
 
 ``` bash
-wget -O - https://raw.githubusercontent.com/FastIT/Dev-Ubuntu-Setup/master/install.sh | sh
+wget -O - https://raw.githubusercontent.com/FastIT/Dev-Ubuntu-Setup/master/light-install.sh | sh
 ```
 ## OHMYZSH Bug Fix
 
