@@ -62,10 +62,6 @@ sudo apt-get --assume-yes install ansible
 # Final Update
 sudo apt-get update
 
-# Zsh
-sudo apt-get --assume-yes install zsh
-wget https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh -O - | zsh
-
 #Node update
 sudo nvm install --lts
 
