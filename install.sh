@@ -5,13 +5,16 @@ sudo apt-get update
 # Installing build essentials
 sudo apt-get --assume-yes install build-essential libssl-dev
 
-# Vim, Curl, Python - useful stuff
+# Vim, Curl, Python JDK and JRE - useful stuff
 sudo apt-get --assume-yes install vim curl python-software-properties
 sudo apt-get --assume-yes install python-pip python-dev build-essential
 sudo pip install --upgrade pip
 sudo pip install --upgrade virtualenv
 sudo apt-get --assume-yes install libkrb5-dev
-
+sudo apt-get --assume-yes install default-jre
+sudo apt-get --assume-yes install default-jdk
+# Node & NPM
+sudo apt-get apt-get --assume-yes install nodejs npm
 # Virtualbox
 sudo apt-get --assume-yes install virtualbox
 

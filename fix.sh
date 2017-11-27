@@ -11,7 +11,7 @@ source ~/.nvm/nvm.sh
 chown "$USER":"$USER" /home/"$USER"/.docker -R
 sudo chown "$USER":"$USER" /var/run/docker.sock -R
 
-#Node update lts with NVM
+#Node update lts with NVM   
 sudo nvm install --lts
 
 #Need to restart to apply all updates
