@@ -17,6 +17,12 @@ and then restart
     sudo shutdown -r 0
 ## How to install all the Development tools
 ### All Tools:
+
+Just execute this command
+
+``` bash
+wget -O - https://raw.githubusercontent.com/FastIT/Dev-Ubuntu-Setup/master/install.sh | sh
+```
 * Build essentials
 * Vim, Curl, Python - useful stuff
 * Node & NPM
@@ -34,14 +40,13 @@ and then restart
 * Zsh
 * JRE & JDK
 
+## FOR LIGHT VERSION USE THIS SH
+### Light Tools:
 Just execute this command
 
 ``` bash
-wget -O - https://raw.githubusercontent.com/FastIT/Dev-Ubuntu-Setup/master/install.sh | sh
+wget -O - https://raw.githubusercontent.com/FastIT/Dev-Ubuntu-Setup/master/light-install.sh | sh
 ```
-
-## FOR LIGHT VERSION USE THIS SH
-### Light Tools:
 * Build essentials
 * Vim, Curl, Python - useful stuff
 * Node & NPM
@@ -55,8 +60,25 @@ wget -O - https://raw.githubusercontent.com/FastIT/Dev-Ubuntu-Setup/master/insta
 * Ansible
 * Zsh
 * JRE & JDK
-Just execute this command
 
+#NVM OHMYZSH FIX
 ``` bash
-wget -O - https://raw.githubusercontent.com/FastIT/Dev-Ubuntu-Setup/master/light-install.sh | sh
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+source ~/.nvm/nvm.sh
+```
+
+# Get super-perm for Docker
+``` bash
+chown "$USER":"$USER" /home/"$USER"/.docker -R
+sudo chown "$USER":"$USER" /var/run/docker.sock -R
+```
+#Node update lts with NVM
+``` bash   
+sudo nvm install --lts
+```
+#Need to restart to apply all updates
+``` bash
+sudo shutdown -r
 ```
