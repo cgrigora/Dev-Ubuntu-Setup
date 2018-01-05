@@ -38,12 +38,6 @@ sudo apt-get --assume-yes install git-core
 # Yeoman - for generators
 sudo yarn global add yo
 
-# KVM acceleration and cpu checker
-sudo apt-get --assume-yes install  cpu-checker
-sudo apt-get --assume-yes install  qemu-kvm libvirt-bin ubuntu-vm-builder bridge-utils
-sudo apt-get --assume-yes install  virt-manager
-sudo apt-get --assume-yes install  lib32z1 lib32ncurses5 lib32stdc++6
-
 # Docker
 curl -fsSL get.docker.com -o get-docker.sh
 sh get-docker.sh
